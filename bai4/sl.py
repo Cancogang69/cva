@@ -55,10 +55,10 @@ def object_detection_api(img, label_count, threshold=0.5, rect_th=3):
   count = 0
   for box, label in zip(boxes, pred_cls):
     if label_count == "Nothing":
-      cv2.rectangle(img, box[0], box[1], color=(0, 255, 0), thickness= rect_th) 
+      cv2.rectangle(img, box[0], box[1], color=green, thickness= rect_th) 
     if label == label_count:
       count+=1
-      cv2.rectangle(img, box[0], box[1], color=(0, 255, 0), thickness= rect_th) 
+      cv2.rectangle(img, box[0], box[1], color=green, thickness= rect_th) 
   
   return img, count
 
